@@ -2,9 +2,6 @@ package xyz.project.models.dto;
 
 import xyz.project.models.entities.Member;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-
 public record MemberLite(
         Long id,
         String email,
@@ -14,8 +11,8 @@ public record MemberLite(
         String state,
         String postal,
         String birthDate,
-        @Enumerated(EnumType.ORDINAL) Member.Role roleId,
-        @Enumerated(EnumType.ORDINAL) Member.Status statusId
+        int roleId,
+        int  statusId
 ) {
 
 
